@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="phonecatApp">
+<html lang="en" ng-app="qrApp">
 <head>
   <meta charset="utf-8">
   <title>QR Knowledge card generator</title>
@@ -21,10 +21,38 @@
   <script src="js/app.js"></script>
   <script src="js/controllers.js"></script>
 </head>
-<body>
+<body ng-controller="QrCardCtrl">
 
-  <div class="view-container">
-    <div ng-view class="view-frame"></div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2">
+        <!--Sidebar content-->
+		
+		<div class="well">
+
+        	Begrepp: <input ng-model="keyword" />
+
+      	</div>
+      </div>
+	  
+      <div class="col-md-10">
+		  
+		  {{keyword}}
+        <!--Body content-->
+		
+		<p>
+			<img ng-src="https://chart.googleapis.com/chart?cht=qr&chl=keyword:{{keyword}},campaign:{{campaign}}&amp;chs=200x200&amp;choe=UTF-8&amp;chld=L|2" />
+		</p>
+
+        <ul class="phones">
+          <li ng-repeat="phone in phones | filter:query">
+            <span>{{phone.name}}</span>
+            <p>{{phone.snippet}}</p>
+          </li>
+        </ul>
+
+      </div>
+    </div>
   </div>
 
 </body>

@@ -6,5 +6,5 @@ var qrApp = angular.module('qrApp', []);
 
 qrApp.controller('QrCardCtrl', function($scope) {
 	$scope.keyword = "Kunskap";
-	$scope.campaignId = "121345";
+	$scope.campaign = "121345";
 });
