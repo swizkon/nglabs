@@ -1,0 +1,4 @@
+
+Generating QR codes:
+
+https://chart.googleapis.com/chart?cht=qr&chl=CODETEXTGOESHERE&chs=360x360&choe=UTF-8&chld=L|2
