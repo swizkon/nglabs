@@ -5,7 +5,7 @@
 var qrApp = angular.module('qrApp', []);
 
 qrApp.controller('QrCardCtrl', function($scope) {
-	$scope.keyword = "Kunskap";
-	$scope.campaign = "121345";
-	$scope.client = "stadsmuseet";
+	$scope.keyword = "Skogsmus";
+	$scope.campaign = "123";
+	$scope.client = "naturhistoriska";
 });
